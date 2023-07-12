@@ -1,11 +1,13 @@
 package com.katoklizm.playlistmaker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
+import com.katoklizm.playlistmaker.medialibrary.MediaLibraryActivity
+import com.katoklizm.playlistmaker.search.SearchActivity
+import com.katoklizm.playlistmaker.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,29 +18,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val mediaLibraryPlaylistMaker = findViewById<Button>(R.id.media_library_playlist_maker)
         val settingPlaylistMaker = findViewById<Button>(R.id.setting_playlist_maker)
 
-//        val imageClickListener: View.OnClickListener = object : View.OnClickListener {
-//            override fun onClick(v: View?) {
-//                Toast.makeText(this@MainActivity, "Нажали на картинку!", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-
-//        searchPlaylistMaker.setOnClickListener (imageClickListener)
-
-//        searchPlaylistMaker.setOnClickListener (this@MainActivity)
-//        mediaLibraryPlaylistMaker.setOnClickListener (this@MainActivity)
-//        settingPlaylistMaker.setOnClickListener (this@MainActivity)
+        searchPlaylistMaker.setOnClickListener (this@MainActivity)
+        mediaLibraryPlaylistMaker.setOnClickListener (this@MainActivity)
+        settingPlaylistMaker.setOnClickListener (this@MainActivity)
     }
 
     override fun onClick(p0: View?) {
         when(p0?.id) {
             R.id.search_playlist_maker -> {
-                Toast.makeText(this@MainActivity, "Нажали на картинку!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, SearchActivity::class.java)
+                startActivity(intent)
             }
             R.id.media_library_playlist_maker -> {
-
+                val intent = Intent(this, MediaLibraryActivity::class.java)
+                startActivity(intent)
             }
             R.id.setting_playlist_maker -> {
-
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
             }
         }
     }
