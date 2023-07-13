@@ -16,7 +16,6 @@
             android:exported="false" />
         <activity
             android:name=".search.SearchActivity"
-            android:noHistory="true"
             android:exported="false" />
         <activity
             android:name=".settings.SettingsActivity"

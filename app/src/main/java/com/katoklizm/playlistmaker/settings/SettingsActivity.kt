@@ -9,7 +9,7 @@ import com.katoklizm.playlistmaker.R
 class SettingsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.settings_playlist_maker)
+        setContentView(R.layout.activity_settings_playlist_maker)
 
         val backActivity = findViewById<ImageView>(R.id.text_back)
 
