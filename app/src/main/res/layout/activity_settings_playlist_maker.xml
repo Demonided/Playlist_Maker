@@ -13,7 +13,6 @@
 
         <ImageView
             android:id="@+id/text_back"
-            style="@style/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -24,7 +23,6 @@
         <TextView
             style="@style/TextStyleMainMenu"
             android:text="@string/setting_playlist" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -55,11 +53,11 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/StyleSetting"
+            style="@style/StyleSettingText"
             android:text="@string/setting_share_app" />
 
         <ImageView
-            style="@style/StyleSetting"
+            style="@style/StyleSettingVector"
             android:layout_weight="1"
             android:background="@drawable/share_app" />
     </LinearLayout>
@@ -73,11 +71,11 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/StyleSetting"
+            style="@style/StyleSettingText"
             android:text="@string/setting_write_to_support" />
 
         <ImageView
-            style="@style/StyleSetting"
+            style="@style/StyleSettingVector"
             android:layout_weight="1"
             android:background="@drawable/support_agent" />
     </LinearLayout>
@@ -91,11 +89,11 @@
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/StyleSetting"
+            style="@style/StyleSettingText"
             android:text="@string/setting_terms_of_use" />
 
         <ImageView
-            style="@style/StyleSetting"
+            style="@style/StyleSettingVector"
             android:layout_weight="1"
             android:background="@drawable/next_open_window" />
     </LinearLayout>
