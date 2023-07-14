@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="StyleSetting">
+
+    <style name="StyleSettingText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginHorizontal">10dp</item>
@@ -12,9 +13,22 @@
         <item name="android:textFontWeight">400</item>
         <item name="backgroundTint">@color/black</item>
     </style>
-    
+
+    <style name="StyleSettingVector">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">10dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_weight">15</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="backgroundTint">@color/grey</item>
+    </style>
+
     <style name="TextStyleMainMenu">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">12dp</item>
         <item name="android:textColor">@color/black</item>
@@ -22,7 +36,7 @@
         <item name="android:fontFamily">@font/ys_display_medium</item>
     </style>
 
-    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button" >
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginHorizontal">20dp</item>
@@ -43,7 +57,7 @@
     <style name="btnBack">
         <item name="android:backgroundTint">@color/black</item>
     </style>
-    
+
     <style name="LinerLayoutOneWindow">
         <item name="android:background">@color/blue</item>
     </style>
