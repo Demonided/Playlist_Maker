@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.katoklizm.playlistmaker.MainActivity
 import com.katoklizm.playlistmaker.R
 
 class SettingsActivity: AppCompatActivity() {
@@ -14,8 +15,7 @@ class SettingsActivity: AppCompatActivity() {
         val backActivity = findViewById<ImageView>(R.id.text_back)
 
         backActivity.setOnClickListener {
-            val intent = Intent(this@SettingsActivity, com.katoklizm.playlistmaker.MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
