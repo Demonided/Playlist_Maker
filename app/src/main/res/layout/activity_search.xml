@@ -13,6 +13,9 @@
         android:orientation="horizontal">
 
         <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             style="@style/btnBack"
             android:background="@drawable/arrow_back_search"
             />
