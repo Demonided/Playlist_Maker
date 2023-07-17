@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.katoklizm.playlistmaker.databinding.ActivityMainBinding
 import com.katoklizm.playlistmaker.medialibrary.MediaLibraryActivity
 import com.katoklizm.playlistmaker.search.SearchActivity
 import com.katoklizm.playlistmaker.settings.SettingsActivity
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,25 +21,40 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val mediaLibraryPlaylistMaker = findViewById<Button>(R.id.media_library_playlist_maker)
         val settingPlaylistMaker = findViewById<Button>(R.id.setting_playlist_maker)
 
-        searchPlaylistMaker.setOnClickListener (this@MainActivity)
-        mediaLibraryPlaylistMaker.setOnClickListener (this@MainActivity)
-        settingPlaylistMaker.setOnClickListener (this@MainActivity)
+        searchPlaylistMaker.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+        }
+
+        mediaLibraryPlaylistMaker.setOnClickListener {
+            val intent = Intent(this, MediaLibraryActivity::class.java)
+            startActivity(intent)
+        }
+
+        settingPlaylistMaker.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+//        searchPlaylistMaker.setOnClickListener  (this@MainActivity)
+//        mediaLibraryPlaylistMaker.setOnClickListener (this@MainActivity)
+//        settingPlaylistMaker.setOnClickListener (this@MainActivity)
     }
 
-    override fun onClick(p0: View?) {
-        when(p0?.id) {
-            R.id.search_playlist_maker -> {
-                val intent = Intent(this, SearchActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.media_library_playlist_maker -> {
-                val intent = Intent(this, MediaLibraryActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.setting_playlist_maker -> {
-                val intent = Intent(this, SettingsActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
+//    override fun onClick(p0: View?) {
+//        when(p0?.id) {
+//            R.id.search_playlist_maker -> {
+//                val intent = Intent(this, SearchActivity::class.java)
+//                startActivity(intent)
+//            }
+//            R.id.media_library_playlist_maker -> {
+//                val intent = Intent(this, MediaLibraryActivity::class.java)
+//                startActivity(intent)
+//            }
+//            R.id.setting_playlist_maker -> {
+//                val intent = Intent(this, SettingsActivity::class.java)
+//                startActivity(intent)
+//            }
+//        }
+//    }
 }

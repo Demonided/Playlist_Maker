@@ -13,7 +13,7 @@ class SettingsActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings_playlist_maker)
 
-        val backActivity = findViewById<ImageView>(R.id.text_back)
+        val backActivity = findViewById<ImageView>(R.id.text_back_setting)
         val settingsShareApp = findViewById<LinearLayout>(R.id.settings_share_app)
         val settingsWriteToSupport = findViewById<LinearLayout>(R.id.settings_write_to_support)
         val settingsTermOfUse = findViewById<LinearLayout>(R.id.settings_term_of_use)
