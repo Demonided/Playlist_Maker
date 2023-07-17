@@ -16,12 +16,6 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val liner = findViewById<LinearLayout>(R.id.btn_hs)
-
-        liner.setOnClickListener {
-            val color = Color.argb(255, Random.nextInt(256), Random.nextInt(256), Random.nextInt(256))
-            liner.display
-        }
     }
 }
 
