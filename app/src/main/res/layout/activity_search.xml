@@ -14,6 +14,7 @@
 
         <ImageView
             android:id="@+id/text_back"
+            style="@style/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -29,30 +30,32 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        app:cardCornerRadius="8dp"
-        >
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/light_grey">
+            android:background="@color/light_grey"
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/grey"
-                android:background="@drawable/search_playlist" />
+                style="@style/ImageViewSearch"
+                android:layout_weight="1"
+                android:background="@drawable/search_playlist"/>
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/light_grey"
-                android:hint="@string/search_playlist"
-                android:textColor="@color/grey"
+                android:id="@+id/edit_text_search"
+                style="@style/ColorEditTextSearch"
+                android:layout_weight="20"
                 tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/clear_text_search"
+                style="@style/ImageViewSearch"
+                android:layout_weight="1"
+                android:background="@drawable/search_close" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
